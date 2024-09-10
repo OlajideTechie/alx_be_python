@@ -1,0 +1,4 @@
+# Remove unwanted files.
+.vscode
+.pytest_cache
+.DS_Store
