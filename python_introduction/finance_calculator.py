@@ -3,10 +3,9 @@ income_input = input('Enter your monthly income:')
 monthly_income = int(income_input)
 
 income_input = input('Enter your monthly expenses:')
-monthly_expenses = int(income_input)
 
 #calculate monthky savings 
-monthly_savings = monthly_income - monthly_expenses
+monthly_savings = monthly_income - (int(income_input))
 
 #Calculate the projected savings for a year 
 projected_savings = monthly_savings * 12 + (monthly_savings * 12 * 0.05)
