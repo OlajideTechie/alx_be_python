@@ -2,10 +2,10 @@
 num1 = int(input('Enter the first number:')).strip()
 num2 = int(input('Enter the second number:')).strip()
 
-operation_type = input('Choose the operation (+, -, *, /):').strip()
+operation = input('Choose the operation (+, -, *, /):').strip()
 
 # Match case conditions to handle the logic
-match operation_type:
+match operation:
     case '+':
         number_sum = num1 + num2
         print(f'The result is {number_sum}.')
