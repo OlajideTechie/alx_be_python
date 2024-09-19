@@ -1,8 +1,5 @@
+number = int(input('Enter a number to see its multiplication table:'))  # Take user input.
 
-number = int(input('Enter a number to see its multiplication table:')) #Take user input.
-
-for numbers in range(1, 11): #loop to iterate the number times to display 
-        
-        product = number * numbers
-        
-        print(f"{number} x {numbers} = {product}")
+for multiplier in range(1, 11):  # Loop to iterate the number from 1 to 10.
+    product = number * multiplier  
+    print(f"{number} x {multiplier} = {product}")
