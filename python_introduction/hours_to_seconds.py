@@ -2,7 +2,7 @@
 
 hours = 2
 
-#cconver form hours to seconds 
+#convert form hours to seconds 
 seconds = hours * 3600
 
 #print the result 
