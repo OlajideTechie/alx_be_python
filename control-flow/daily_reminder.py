@@ -11,12 +11,8 @@ match priority:
     case 'medium':
         if time_bound == 'no':
             print(f'{task} is a medium priority task that can be done at a later time today.')
-        else:
-            print(f"{task} is a medium priority!")
     case 'low':
         if time_bound == 'no':
             print(f'{task} is a low priority task consider completing it when you have free time.')
-        else:
-            print(f"{task} is a low priority!")
     case _:
         print("Invalid priority level. Please enter high, medium, or low.")
