@@ -1,6 +1,6 @@
 # Prompt user to enter two numbers and select an operation (addition, subtraction, multiplication, or division).
-num1 = int(input('Enter the first number:')).strip()
-num2 = int(input('Enter the second number:')).strip()
+num1 = int(input('Enter the first number: '))
+num2 = int(input('Enter the second number: '))
 
 operation = input('Choose the operation (+, -, *, /):').strip()
 
