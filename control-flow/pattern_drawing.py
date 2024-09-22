@@ -1,7 +1,7 @@
 # Drawing pattern with nested loops
 
 while True:
-    user_input = input('Enter the size of the pattern: ')
+    user_input = int(input('Enter the size of the pattern: '))
     try:
         pattern_length = int(user_input)
         if pattern_length > 0:
@@ -17,4 +17,3 @@ while row < pattern_length:
         print("*", end="")  # Print an asterisk without newline
     print()  # Move to the next line after finishing one row
     row += 1  # Increment row counter
-
