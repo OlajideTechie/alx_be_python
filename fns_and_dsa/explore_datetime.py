@@ -7,6 +7,7 @@ def display_current_datetime():
     formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
     print(formatted_date)
 
+
 def calculate_future_date():
     today = datetime.now()
 
