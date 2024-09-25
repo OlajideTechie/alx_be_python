@@ -26,4 +26,4 @@ if __name__ == "__main__":
         temp_c = fahrenheit_to_celsius(user_input)
         print(f"{user_input}°F is {temp_c:.2f}°C")
     else:
-        print("Invalid input. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
+        print("Invalid temperature. Please enter a numeric value.")
