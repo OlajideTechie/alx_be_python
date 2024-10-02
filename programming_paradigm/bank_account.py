@@ -27,4 +27,4 @@ class BankAccount:
         
     def display_balance(self):
         """Display the current account balance."""
-        return f"Your available balance is: ${self.account_balance:.2f}"
+        return f"Current Balance: ${self.account_balance:.2f}"
