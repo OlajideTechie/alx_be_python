@@ -1,3 +1,5 @@
+# bank_account.py
+
 class BankAccount:
     
     def __init__(self, initial_balance=0):
@@ -10,36 +12,27 @@ class BankAccount:
             amount = float(amount)  # Ensure amount is a float
             if amount > 0:
                 self.account_balance += amount
-                return f"Deposit successful! Your new balance is ${self.account_balance:.2f}"
+                return f"Deposited ${amount:.2f}"
             else:
                 return 'Invalid deposit amount. Please enter a positive number.'
         except ValueError:
             return 'Invalid input. Please enter a numeric value.'
 
     def withdraw(self, amount):
-        print(f"Current Balance: {self.account_balance}, Amount Requested: {amount}")
-        if self.is_numeric(amount):
-            amount = float(amount)
+        """Withdraw money from the account."""
+        try:
+            amount = float(amount)  # Ensure amount is a float
             if amount > 0:
                 if amount <= self.account_balance:
                     self.account_balance -= amount
-                    return f'${amount} has been withdrawn from your account successfully.'
+                    return f'Withdrew ${amount:.2f}'  # Indicate success
                 else:
-                    return 'Insufficient funds.'
+                     return f'Insufficient funds.'   # Insufficient funds
             else:
                 return 'Invalid withdrawal amount. Please enter a positive number.'
-        else:
+        except ValueError:
             return 'Invalid input. Please enter a numeric value.'
-        
+
     def display_balance(self):
         """Display the current account balance."""
         return f"Current Balance: ${self.account_balance:.2f}"
-
-    @staticmethod
-    def is_numeric(value):
-        """Check if the value can be converted to a float."""
-        try:
-            float(value)
-            return True
-        except ValueError:
-            return False
