@@ -17,7 +17,7 @@ class BankAccount:
             return 'Invalid input. Please enter a numeric value.'
 
     def withdraw(self, amount):
-        """Withdraw money from the account."""
+        print(f"Current Balance: {self.account_balance}, Amount Requested: {amount}")
         if self.is_numeric(amount):
             amount = float(amount)
             if amount > 0:
@@ -25,7 +25,7 @@ class BankAccount:
                     self.account_balance -= amount
                     return f'${amount} has been withdrawn from your account successfully.'
                 else:
-                    return 'Insufficient funds. Withdrawal not successful.'
+                    return 'Insufficient funds.'
             else:
                 return 'Invalid withdrawal amount. Please enter a positive number.'
         else:
