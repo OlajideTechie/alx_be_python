@@ -41,3 +41,34 @@ class BankAccount:
         """Display the current account balance."""
         return f"Current Balance: ${self.account_balance:.2f}"
 
+
+import sys
+from bank_account import BankAccount
+
+def main():
+    account = BankAccount(250)  # Example starting balance
+
+    if len(sys.argv) < 2:
+        print("Usage: python main.py <command>:<amount>")
+        print("Commands: deposit, withdraw, display")
+        sys.exit(1)
+
+    # Process each command provided
+    for command_str in sys.argv[1:]:
+        command, *params = command_str.split(':')
+        amount = params[0] if params else None
+
+        if command == "deposit" and amount is not None:
+            result = account.deposit(amount)
+            print(result)  # Output the result of the deposit
+        elif command == "withdraw" and amount is not None:
+            result = account.withdraw(amount)
+            print(result)  # Output the result of the withdrawal
+        elif command == "display":
+            print(account.display_balance())  # Print the balance
+        else:
+            print(f"Invalid command or parameters for '{command_str}'.")
+
+if __name__ == "__main__":
+    main()
+
