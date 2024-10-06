@@ -3,7 +3,7 @@ class Book:
         """Initialize a book with a title and an author."""
         self.title = title
         self.author = author
-        self._is_checked_out = False  # Private attribute to track availability
+        self._is_checked_out = False  
 
     def check_out(self):
         """Check out the book, marking it as unavailable."""
