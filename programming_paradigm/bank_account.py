@@ -4,7 +4,7 @@ class BankAccount:
     
     def __init__(self, initial_balance=0):
         """Initialize the bank account with a non-negative balance."""
-        self.account_balance = float(initial_balance) if float(initial_balance) >= 0 else 0
+        self._account_balance = float(initial_balance) if float(initial_balance) >= 0 else 0
 
     def deposit(self, amount):
         """Deposit money into the account."""
@@ -13,8 +13,8 @@ class BankAccount:
             if amount <= 0:
                    return 'Invalid deposit amount. Please enter a positive number.'
                        
-            self.account_balance += amount
-            return (f"Deposited ${amount:.2f}")
+            self._account_balance += amount
+            return f"Deposited ${amount:.2f}"
         
         except ValueError:
             return 'Invalid input. Please enter a numeric value.'
@@ -27,10 +27,10 @@ class BankAccount:
             if amount <= 0:
                  return 'Invalid withdrawal amount. Please enter a positive number.'
                     
-            if amount > self.account_balance:
+            if amount > self._account_balance:
                 return 'Insufficient funds.'
             
-            self.account_balance -= amount
+            self._account_balance -= amount
             return f'Withdrew ${amount:.2f}'
         
         except ValueError:
@@ -39,5 +39,5 @@ class BankAccount:
 
     def display_balance(self):
         """Display the current account balance."""
-        return (f"Current Balance: ${self.account_balance:.2f}")
+        return f"Current Balance: ${self._account_balance:.2f}"
 
