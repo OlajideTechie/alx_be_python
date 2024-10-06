@@ -14,7 +14,7 @@ class BankAccount:
                    return 'Invalid deposit amount. Please enter a positive number.'
                        
             self._account_balance += amount
-            return f"Deposited ${amount:.2f}"
+            return f"Deposited ${amount}"
         
         except ValueError:
             return 'Invalid input. Please enter a numeric value.'
@@ -31,7 +31,7 @@ class BankAccount:
                 return 'Insufficient funds.'
             
             self._account_balance -= amount
-            return f'Withdrew ${amount:.2f}'
+            return f'Withdrew ${amount}'
         
         except ValueError:
                return 'Invalid input. Please enter a numeric value.'
