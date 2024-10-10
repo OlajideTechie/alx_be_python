@@ -25,17 +25,17 @@ class PrintBook(Book):
 
 class Library:
       def __init__(self):
-        # List to store Book, EBook, or PrintBook instances
+        # Create List to store Book, EBook, or PrintBook instances
+
         self.books = []
         
       def add_book(self, book):
         self.books.append(book)
-        print(f"Added {book.title} to the library.")
         
       def list_books(self):
         """Prints details of each book in the library."""
         if not self.books:
-            print("No books in the library.")
+           return False
         else:
             for book in self.books:
                 print(book)
